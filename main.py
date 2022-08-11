@@ -20,12 +20,9 @@ guess = input("Guess a letter: ").lower()
 #TODO-2: - Loop through each position in the chosen_word;
 #If the letter at that position matches 'guess' then reveal that letter in the display at that position.
 #e.g. If the user guessed "p" and the chosen word was "apple", then display should be ["_", "p", "p", "_", "_"].
-guess_index = []
-for letter in range(len(chosen_word)):
-  if chosen_word[letter] == guess:
-    guess_index.append(letter) 
-for index in guess_index:
-  display[index] = guess
+for position in range(len(chosen_word)):
+    if chosen_word[position] == guess:
+        display[position] = guess
 print(display)
     
 
